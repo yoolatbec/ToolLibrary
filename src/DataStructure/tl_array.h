@@ -1,9 +1,9 @@
-#ifndef _TL_ARRAY_H_
-#define _TL_ARRAY_H_
+#ifndef TL_ARRAY_H
+#define TL_ARRAY_H
 
-#include "tl_def.h"
+#include "../tl_def.h"
 
-#define ARRAY_MAX_CAPACITY (unsigned long long)(-1);
+#define ARRAY_MAX_CAPACITY (size_t)(-1);
 
 typedef struct tl_array{
     Object super;
