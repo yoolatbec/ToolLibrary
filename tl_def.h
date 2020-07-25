@@ -8,6 +8,11 @@
 #ifndef TL_DEF_H_
 #define TL_DEF_H_
 
+#define false 0
+#define true (!false)
+
+#define nullptr 0
+
 typedef struct tl_byte{
 	int: 8;
 } Byte;
@@ -15,7 +20,7 @@ typedef struct tl_byte{
 typedef Byte* tl_ptr;
 
 typedef struct tl_object{
-	long long hash_code;
+	unsigned long long hash_code;
 } Object;
 
 extern const Object null;

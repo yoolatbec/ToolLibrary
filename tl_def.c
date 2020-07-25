@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include "tl_def.h"
 
-static long long hash_code(Object*);
+static unsigned long long hash_code(Object*);
 
 const Object null = {
 	0
@@ -15,4 +15,10 @@ const Object null = {
 
 Object* tl_create_object(void){
 	Object* obj = malloc(sizeof(Object));
+	obj->hash_code = hash_code(obj);
+	return obj;
+}
+
+static unsigned long long hash_code(Object* object){
+
 }
